@@ -12,15 +12,17 @@ def main():
     bg_img = pg.image.load("fig/pg_bg.jpg")#練習1
     kk_img = pg.image.load("fig/3.png")#練習3
     tmr = 0
-    
+
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+        x = tmr  # 練習5
         screen.blit(bg_img, [0, 0])#練習2
         screen.blit(kk_img, [300, 200])#練習4
         pg.display.update()
         tmr += 1        
         clock.tick(10)
+        clock.tick(200)  # 練習6
 
 
 if __name__ == "__main__":
