@@ -24,6 +24,7 @@ def main():
             key_lst = pg.key.get_pressed()  # 練習10：すべてのキーの押下状態の取得\\
             
         # print(key_lst)
+        kk_rct.move_ip(-1,0)
         if key_lst[pg.K_UP]:  # 上矢印キーが押されていたら
             kk_rct.move_ip(0, -1)
         if key_lst[pg.K_DOWN]:  # 下矢印キーが押されていたら
@@ -34,7 +35,6 @@ def main():
             kk_rct.move_ip(+2, 0)
 
         x = tmr%3200  # 練習5
-        kk_rct.move_ip(-1,0)
         screen.blit(bg_img, [-x, 0])#練習2
         screen.blit(bg_img2, [-x+1600, 0])  # 練習7
         screen.blit(bg_img, [-x+3200, 0])  # 練習9
