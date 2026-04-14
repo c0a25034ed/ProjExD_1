@@ -22,8 +22,8 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
             key_lst = pg.key.get_pressed()  # 練習10：すべてのキーの押下状態の取得\\  
-            # print(key_lst)
-            kk_rct.move_ip(-1,0)
+            print(key_lst)
+        kk_rct.move_ip(-1,0)
         if key_lst[pg.K_UP]:  # 上矢印キーが押されていたら
             kk_rct.centery -=1
         if key_lst[pg.K_DOWN]:  # 下矢印キーが押されていたら
